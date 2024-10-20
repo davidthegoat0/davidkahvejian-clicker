@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Cookie Clicker</h1>
+
+        <!-- Cookie Count Display -->
+        <div class="cookie-count">
+            <p>Cookies: <span id="cookieCount">0</span></p>
+        </div>
+
+        <!-- Clicker Button -->
+        <button id="clickerButton" onclick="increaseCookies()">Click me!</button>
+
+        <!-- Click Upgrades -->
+        <div class="upgrades">
+            <h2>Click Upgrades</h2>
+            <p>Click Power Upgrade: <span id="clickUpgradeCost">50</span> cookies</p>
+            <button id="upgradeButton" onclick="buyClickUpgrade()">Buy Upgrade</button>
+        </div>
+
+        <!-- Auto-generators -->
+        <div class="generators">
+            <h2>Auto-generators</h2>
+
+            <!-- Farm -->
+            <div class="generator">
+                <p>Farm (1 cookie/sec): <span id="farmCost">100</span> cookies</p>
+                <button id="buyFarmButton" onclick="buyFarm()">Buy Farm</button>
+                <p>Farm Upgrade: <span id="farmUpgradeCost">150</span> cookies</p>
+                <button id="farmUpgradeButton" onclick="buyFarmUpgrade()">Upgrade Farm</button>
+                <p>Farm Efficiency Upgrade: <span id="farmEfficiencyCost">500</span> cookies</p>
+                <button id="farmEfficiencyUpgradeButton" onclick="buyFarmEfficiencyUpgrade()">Upgrade Efficiency</button>
+            </div>
+
+            <!-- Mine -->
+            <div class="generator">
+                <p>Mine (5 cookies/sec): <span id="mineCost">500</span> cookies</p>
+                <button id="buyMineButton" onclick="buyMine()">Buy Mine</button>
+                <p>Mine Upgrade: <span id="mineUpgradeCost">750</span> cookies</p>
+                <button id="mineUpgradeButton" onclick="buyMineUpgrade()">Upgrade Mine</button>
+                <p>Mine Efficiency Upgrade: <span id="mineEfficiencyCost">2000</span> cookies</p>
+                <button id="mineEfficiencyUpgradeButton" onclick="buyMineEfficiencyUpgrade()">Upgrade Efficiency</button>
+            </div>
+
+            <!-- Factory -->
+            <div class="generator">
+                <p>Factory (20 cookies/sec): <span id="factoryCost">2000</span> cookies</p>
+                <button id="buyFactoryButton" onclick="buyFactory()">Buy Factory</button>
+                <p>Factory Upgrade: <span id="factoryUpgradeCost">2500</span> cookies</p>
+                <button id="factoryUpgradeButton" onclick="buyFactoryUpgrade()">Upgrade Factory</button>
+                <p>Factory Efficiency Upgrade: <span id="factoryEfficiencyCost">5000</span> cookies</p>
+                <button id="factoryEfficiencyUpgradeButton" onclick="buyFactoryEfficiencyUpgrade()">Upgrade Efficiency</button>
+            </div>
+
+            <!-- Temple -->
+            <div class="generator">
+                <p>Temple (50 cookies/sec): <span id="templeCost">10000</span> cookies</p>
+                <button id="buyTempleButton" onclick="buyTemple()">Buy Temple</button>
+                <p>Temple Upgrade: <span id="templeUpgradeCost">15000</span> cookies</p>
+                <button id="templeUpgradeButton" onclick="buyTempleUpgrade()">Upgrade Temple</button>
+                <p>Temple Efficiency Upgrade: <span id="templeEfficiencyCost">30000</span> cookies</p>
+                <button id="templeEfficiencyUpgradeButton" onclick="buyTempleEfficiencyUpgrade()">Upgrade Efficiency</button>
+            </div>
+
+            <!-- Portal -->
+            <div class="generator">
+                <p>Portal (100 cookies/sec): <span id="portalCost">50000</span> cookies</p>
+                <button id="buyPortalButton" onclick="buyPortal()">Buy Portal</button>
+                <p>Portal Upgrade: <span id="portalUpgradeCost">75000</span> cookies</p>
+                <button id="portalUpgradeButton" onclick="buyPortalUpgrade()">Upgrade Portal</button>
+                <p>Portal Efficiency Upgrade: <span id="portalEfficiencyCost">100000</span> cookies</p>
+                <button id="portalEfficiencyUpgradeButton" onclick="buyPortalEfficiencyUpgrade()">Upgrade Efficiency</button>
+            </div>
+        </div>
+
+        <!-- Prestige -->
+        <div class="prestige">
+            <h2>Prestige</h2>
+            <p>Reset the game for permanent bonuses!</p>
+            <p>Prestige Cost: <span id="prestigeCost">10000</span> cookies</p>
+            <button id="prestigeButton" onclick="prestige()">Prestige</button>
+            <p id="prestigeMultiplier">Prestige Multiplier: x1</p>
+            <div id="prestigeProgress">
+                <div id="prestigeProgressBar"></div>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="achievements">
+            <h2>Achievements</h2>
+            <p id="achievementMessage">Achievements: None</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
